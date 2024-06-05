@@ -1,6 +1,14 @@
 import Link from 'next/link';
+import { Metadata } from 'next'
+
 
 const Post = (props) => {
+
+    const metadata = {
+        title: props.title,
+        description: props.text,
+    };
+    
     return (
         <Link href={props.path} passHref>
             <div className="block w-full h-full m-auto overflow-hidden rounded-lg shadow-lg cursor-pointer h-90 w-60 md:w-80">
